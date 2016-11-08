@@ -8,7 +8,7 @@ namespace DesignPatterns.Composite
 {
 	class CompositeElement : DrawingElement
 	{
-		private List<DrawingElement> elements = new List<DrawingElement>();;
+		private List<DrawingElement> elements = new List<DrawingElement>();
 
 		public CompositeElement(string name) : base(name)
 		{
@@ -50,9 +50,9 @@ namespace DesignPatterns.Composite
 		public abstract void Display(int indent);
 	}
 
-	class PrimitveElement : DrawingElement
+	class PrimitiveElement : DrawingElement
 	{
-		public PrimitveElement(string name) : base(name)
+		public PrimitiveElement(string name) : base(name)
 		{
 		}
 

@@ -9,7 +9,7 @@ namespace DesignPatterns.AbstractFactory
 {
 	class AbstractFactory
 	{
-		static void Main()
+		static void Simulate()
 		{
 			IGUIFactory factory;
 			string style = "Windows";
@@ -48,7 +48,7 @@ namespace DesignPatterns.AbstractFactory
 	{
 		public override IButton CreateButton()
 		{
-
+			return new UbuntuButton();
 		}
 	}
 

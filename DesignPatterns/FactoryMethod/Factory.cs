@@ -20,6 +20,10 @@ namespace DesignPatterns.FactoryMethod
 				{
 					return new CityPeople();
 				}
+				case PeopleType.Cave:
+				{
+					return new CavePeople();
+				}
 				default:
 				{
 					throw new NotSupportedException();
@@ -28,9 +32,19 @@ namespace DesignPatterns.FactoryMethod
 		}
 	}
 
+
+
 	interface IPeople
 	{
 		string GetName();
+	}
+
+	class CavePeople : IPeople
+	{
+		public string GetName()
+		{
+			return "Cave Person";
+		}
 	}
 
 	class Villagers : IPeople
@@ -52,6 +66,7 @@ namespace DesignPatterns.FactoryMethod
 	enum PeopleType
 	{
 		Rural,
-		Urban
+		Urban,
+		Cave
 	}
 }
