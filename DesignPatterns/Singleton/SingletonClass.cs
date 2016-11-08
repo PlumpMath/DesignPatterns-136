@@ -1,7 +1,7 @@
 ﻿namespace DesignPatterns.Singleton
 {
 	/// <summary>
-	/// This class' object is sure to be instantiated for once and for the lifetime of the app, only this instance will be used.
+	/// Ensure a class only has one instance, and provide a global point of access to it.
 	/// </summary>
 	public class SingletonClass
 	{

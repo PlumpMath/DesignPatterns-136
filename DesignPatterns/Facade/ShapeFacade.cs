@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Facade
 {
+	/// <summary>
+	/// Provide a unified interface to a set of interfaces in a subsystem. 
+	/// Facade defines a higher-level interface that makes the subsystem easier to use.
+	/// </summary>
 	class ShapeFacade
 	{
 		private IShape rectangle;

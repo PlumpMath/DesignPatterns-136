@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.FactoryMethod
 {
+	/// <summary>
+	/// Define an interface for creating an object, but let subclasses decide which class to instantiate. 
+	/// Factory Method lets a class defer instantiation to subclasses.
+	/// </summary>
 	class Factory
 	{
 		public IPeople GetPeople(PeopleType type)

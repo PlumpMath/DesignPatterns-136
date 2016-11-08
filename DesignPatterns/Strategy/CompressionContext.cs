@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Strategy
 {
-	//This approach enables us to change the behavior of the compression at runtime.
+	/// <summary>
+	/// Define a family of algorithms, encapsulate each one, and make them interchangeable.
+	/// Strategy lets the algorithm vary independently from clients that use it.
+	/// </summary>
 	class CompressionContext
 	{
 		private ICompressionStrategy compressionStrategy;

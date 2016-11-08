@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.AbstractFactory
 {
+	/// <summary>
+	/// Provide an interface for creating families of related or dependent objects 
+	/// without specifying their concrete classes.
+	/// </summary>
 	class AbstractFactory
 	{
 		static void Simulate()

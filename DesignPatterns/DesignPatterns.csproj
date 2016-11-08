@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactory\AbstractFactory.cs" />
     <Compile Include="Adapter\FrenchPersonAdapter.cs" />
+    <Compile Include="Bridge\BridgePattern.cs" />
     <Compile Include="Builder\Builder.cs" />
     <Compile Include="Composite\CompositeElement.cs" />
     <Compile Include="Decorator\CoffeeDecorator.cs" />

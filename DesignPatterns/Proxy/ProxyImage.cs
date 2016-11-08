@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Proxy
 {
+	/// <summary>
+	/// Provide a surrogate or placeholder for another object to control access to it.
+	/// </summary>
 	class ProxyImage : IImage
 	{
 		private RealImage realImage;
