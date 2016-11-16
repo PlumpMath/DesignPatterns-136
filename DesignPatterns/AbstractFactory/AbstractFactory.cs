@@ -15,7 +15,7 @@ namespace DesignPatterns.AbstractFactory
 	{
 		static void Simulate()
 		{
-			IGUIFactory factory;
+			GUIFactory factory;
 			string style = "Windows";
 			
 			if(style.Equals("Windows"))
@@ -37,7 +37,7 @@ namespace DesignPatterns.AbstractFactory
 		void Draw();
 	}
 
-	abstract class IGUIFactory
+	abstract class GUIFactory
 	{
 		public abstract IButton CreateButton();
 
@@ -45,10 +45,9 @@ namespace DesignPatterns.AbstractFactory
 		{
 			CreateButton().Draw(); 
 		}
-
 	}
 
-	class UbuntuFactory : IGUIFactory
+	class UbuntuFactory : GUIFactory
 	{
 		public override IButton CreateButton()
 		{
@@ -56,7 +55,7 @@ namespace DesignPatterns.AbstractFactory
 		}
 	}
 
-	class WindowsFactory : IGUIFactory
+	class WindowsFactory : GUIFactory
 	{
 		public override IButton CreateButton()
 		{
@@ -64,7 +63,7 @@ namespace DesignPatterns.AbstractFactory
 		}
 	}
 
-	class MacOSXFactory : IGUIFactory
+	class MacOSXFactory : GUIFactory
 	{
 		public override IButton CreateButton()
 		{

@@ -36,8 +36,6 @@ namespace DesignPatterns.FactoryMethod
 		}
 	}
 
-
-
 	interface IPeople
 	{
 		string GetName();
