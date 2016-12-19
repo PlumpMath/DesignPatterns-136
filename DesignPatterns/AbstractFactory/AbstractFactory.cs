@@ -32,9 +32,9 @@ namespace DesignPatterns.AbstractFactory
 		}
 	}
 
-	interface IButton
+	abstract class IButton
 	{
-		void Draw();
+		public abstract void Draw();
 	}
 
 	abstract class GUIFactory
@@ -74,7 +74,7 @@ namespace DesignPatterns.AbstractFactory
 
 	class UbuntuButton : IButton
 	{
-		public void Draw()
+		public override void Draw()
 		{
 			Console.WriteLine("Im a Ubuntu Button");
 		}
@@ -82,7 +82,7 @@ namespace DesignPatterns.AbstractFactory
 
 	class WindowsButton : IButton
 	{
-		public void Draw()
+		public override void Draw()
 		{
 			Console.WriteLine("Im a Windows Button");
 		}
@@ -90,7 +90,7 @@ namespace DesignPatterns.AbstractFactory
 
 	class MacOSXButton : IButton
 	{
-		public void Draw()
+		public override void Draw()
 		{
 			Console.WriteLine("Im a MacOSX Button");
 		}

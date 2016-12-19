@@ -47,11 +47,14 @@
     <Compile Include="Adapter\FrenchPersonAdapter.cs" />
     <Compile Include="Bridge\BridgePattern.cs" />
     <Compile Include="Builder\Builder.cs" />
+    <Compile Include="Command\CommandEx.cs" />
     <Compile Include="Composite\CompositeElement.cs" />
-    <Compile Include="Decorator\CoffeeDecorator.cs" />
+    <Compile Include="Decorator\Beverage.cs" />
+    <Compile Include="Decorator\TrollDecorator.cs" />
     <Compile Include="Facade\ShapeFacade.cs" />
     <Compile Include="FactoryMethod\Factory.cs" />
     <Compile Include="InheritingAdapter\FrenchPersonAdapter.cs" />
+    <Compile Include="Iterator\IteratorEx.cs" />
     <Compile Include="OCPrinciple\AreaCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

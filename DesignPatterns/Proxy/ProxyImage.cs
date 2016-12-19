@@ -25,7 +25,7 @@ namespace DesignPatterns.Proxy
 			{
 				realImage = new RealImage(fileName);
 			}
-
+			
 			realImage.Display();
 		}
 	}
@@ -42,6 +42,7 @@ namespace DesignPatterns.Proxy
 		public RealImage(string fileName)
 		{
 			this.fileName = fileName;
+			LoadImageFromDisk();
 		}
 
 		public void Display()
