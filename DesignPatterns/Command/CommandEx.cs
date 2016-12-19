@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Command
 {
+	/// <summary>
+	/// Encapsulate a request as an object, thereby letting you parameterize clients with different requests,
+	/// queue or log requests, and support undoable operations.
+	/// </summary>
 	class CommandEx
 	{
 		public void Simulate()

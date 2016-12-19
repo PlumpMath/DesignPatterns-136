@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Iterator
 {
+	/// <summary>
+	/// Provide a way to access the elements of an aggregate object sequentially 
+	/// without exposing its underlying representation.
+	/// </summary>
 	class IteratorEx
 	{
 

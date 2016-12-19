@@ -55,12 +55,16 @@
     <Compile Include="FactoryMethod\Factory.cs" />
     <Compile Include="InheritingAdapter\FrenchPersonAdapter.cs" />
     <Compile Include="Iterator\IteratorEx.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Observer\Observer.cs" />
     <Compile Include="OCPrinciple\AreaCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proxy\ProxyImage.cs" />
     <Compile Include="Singleton\SingletonClass.cs" />
+    <Compile Include="State\StateEx.cs" />
     <Compile Include="Strategy\CompressionContext.cs" />
+    <Compile Include="TemplateMethod\Game.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
