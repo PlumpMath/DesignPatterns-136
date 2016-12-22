@@ -13,7 +13,6 @@ namespace DesignPatterns.TemplateMethod
 	{
 		protected int _playersCount = 0;
 
-
 		//hook methods, concrete implementations may differ in each subclass
 		public abstract void InitializeGame();
 		public abstract void MakePlay(int player);
@@ -47,19 +46,19 @@ namespace DesignPatterns.TemplateMethod
 		//initialize players and money
 		public override void InitializeGame()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Monopoly initialized");
 		}
 
 		//process one turn of a player
 		public override void MakePlay(int player)
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Monopoly is being played");
 		}
 
 		//print the winner of the game
 		public override void PrintWinner()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Winner is player 1");
 		}
 	}
 
@@ -74,19 +73,19 @@ namespace DesignPatterns.TemplateMethod
 		//initialize players and the pieces on the board
 		public override void InitializeGame()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Chess initialized");
 		}
 
 		//process one turn of a chess player
 		public override void MakePlay(int player)
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Chess is being played");
 		}
 
 		//display the winner
 		public override void PrintWinner()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Winner is player 2");
 		}
 	}
 
