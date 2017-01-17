@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//composite from decorator
 namespace DesignPatterns.Decorator
 {
 
@@ -11,6 +13,8 @@ namespace DesignPatterns.Decorator
 	{
 		public static void Test()
 		{
+
+			/*	
 			Beverage beverage1 = new DarkRoast();
 			Console.WriteLine(beverage1.GetCost());
 			Console.WriteLine(beverage1.GetDescription());
@@ -24,7 +28,36 @@ namespace DesignPatterns.Decorator
 			beverage2 = new Milk(beverage2);
 			Console.WriteLine(beverage2.GetCost());
 			Console.WriteLine(beverage2.GetDescription());
+			*/
+
+			Beverage doubleMilk = new CondimentComposite();
+
+			doubleMilk.Add(new Milk());
+			doubleMilk.Add(new Milk());
+
+			Console.WriteLine(doubleMilk.GetDescription());
+			Console.WriteLine(doubleMilk.GetCost());
+
+			Beverage doubleHouseBlend = new CondimentComposite();
+			doubleHouseBlend.Add(new HouseBlend());
+			doubleHouseBlend.Add(new HouseBlend());
+
+			Console.WriteLine(doubleHouseBlend.GetDescription());
+			Console.WriteLine(doubleHouseBlend.GetCost());
+
+			Beverage superMix = doubleMilk;
+			superMix.Add(doubleHouseBlend);
+
+			Console.WriteLine("Super Mix");
+			Console.WriteLine("---------------");
+			Console.WriteLine(superMix.GetDescription());
+			Console.WriteLine(superMix.GetCost());
+
+
 		}
+		abstract public void Add(Beverage b);
+		abstract public void Remove(Beverage b);
+
 
 		public virtual string GetDescription()
 		{
@@ -36,6 +69,11 @@ namespace DesignPatterns.Decorator
 
 	class HouseBlend : Beverage
 	{
+		public override void Add(Beverage b)
+		{
+			throw new NotImplementedException();
+		}
+
 		public override int GetCost()
 		{
 			return 5;
@@ -44,6 +82,11 @@ namespace DesignPatterns.Decorator
 		public override string GetDescription()
 		{
 			return base.GetDescription() + "House Blend";
+		}
+
+		public override void Remove(Beverage b)
+		{
+			throw new NotImplementedException();
 		}
 	}
 
@@ -58,50 +101,102 @@ namespace DesignPatterns.Decorator
 		{
 			return 7;
 		}
-	}
 
-	abstract class CondimentDecorator : Beverage
-	{
-		public override abstract string GetDescription();
-	}
-
-	class Milk : CondimentDecorator
-	{
-		private Beverage beverage;
-
-		public Milk(Beverage beverage)
+		public override void Add(Beverage b)
 		{
-			this.beverage = beverage;
+			throw new NotImplementedException();
 		}
+
+		public override void Remove(Beverage b)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	class CondimentComposite : Beverage
+	{
+		private List<Beverage> beverages = new List<Beverage>();
 
 		public override int GetCost()
 		{
-			return beverage.GetCost() + 2;
+			int total = 0;
+
+			foreach (var item in beverages)
+			{
+				total += item.GetCost();
+			}
+
+			return total;
 		}
 
 		public override string GetDescription()
 		{
-			return beverage.GetDescription() + " Milk";
+			string ret = "";
+
+			foreach (var item in beverages)
+			{
+				ret += item.GetDescription() + "-";
+			}
+
+			return ret;
+		}
+
+
+
+		public override void Add(Beverage b)
+		{
+			beverages.Add(b);
+		}
+
+		public override void Remove(Beverage b)
+		{
+			beverages.Remove(b);
 		}
 	}
 
-	class Mocha : CondimentDecorator
+	class Milk : Beverage
 	{
-		private Beverage beverage;
-
-		public Mocha(Beverage beverage)
+		public override void Add(Beverage b)
 		{
-			this.beverage = beverage;
+			throw new NotImplementedException();
 		}
 
 		public override int GetCost()
 		{
-			return beverage.GetCost() + 4;
+			return 2;
 		}
 
 		public override string GetDescription()
 		{
-			return beverage.GetDescription() + " Mocha";
+			return " Milk";
+		}
+
+		public override void Remove(Beverage b)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	class Mocha : Beverage
+	{
+		public override void Add(Beverage b)
+		{
+			throw new NotImplementedException();
+		}
+
+		public override int GetCost()
+		{
+			return 4;
+		}
+
+		public override string GetDescription()
+		{
+			return " Mocha";
+		}
+
+		public override void Remove(Beverage b)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

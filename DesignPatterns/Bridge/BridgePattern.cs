@@ -62,6 +62,15 @@ namespace DesignPatterns.Bridge
 		}
 	}
 
+	class AppleDrawingAPI : IDrawingAPI
+	{
+		public void DrawCircle(double x, double y, double radius)
+		{
+			Console.WriteLine("Apple graphics card drawing circle at " + x.ToString()
+				+ "-" + y.ToString() + " with radius = " + radius.ToString());
+		}
+	}
+
 	//abstraction
 	abstract class Shape
 	{
@@ -102,4 +111,5 @@ namespace DesignPatterns.Bridge
 			radius *= (1.0 + pct / 100.0);
 		}
 	}
+	
 }

@@ -42,7 +42,7 @@ namespace DesignPatterns.State
 
 		public Context()
 		{
-			currentState = null;
+			currentState = new StartState();
 		}
 
 		public void SetState(IState state)

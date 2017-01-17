@@ -45,17 +45,21 @@
   <ItemGroup>
     <Compile Include="AbstractFactory\AbstractFactory.cs" />
     <Compile Include="Adapter\FrenchPersonAdapter.cs" />
+    <Compile Include="Bridge\Bridge2.cs" />
     <Compile Include="Bridge\BridgePattern.cs" />
     <Compile Include="Builder\Builder.cs" />
     <Compile Include="Command\CommandEx.cs" />
     <Compile Include="Composite\CompositeElement.cs" />
+    <Compile Include="Composite\Employee.cs" />
+    <Compile Include="Composite\Widget.cs" />
     <Compile Include="Decorator\Beverage.cs" />
-    <Compile Include="Decorator\TrollDecorator.cs" />
+    <Compile Include="Decorator\Pizza.cs" />
     <Compile Include="Facade\ShapeFacade.cs" />
     <Compile Include="FactoryMethod\Factory.cs" />
     <Compile Include="InheritingAdapter\FrenchPersonAdapter.cs" />
     <Compile Include="Iterator\IteratorEx.cs" />
     <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Compound\DuckSimulator.cs" />
     <Compile Include="Observer\Observer.cs" />
     <Compile Include="OCPrinciple\AreaCalculator.cs" />
     <Compile Include="Program.cs" />

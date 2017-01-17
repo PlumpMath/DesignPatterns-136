@@ -10,7 +10,7 @@ namespace DesignPatterns
 	{
 		static void Main(string[] args)
 		{
-			DesignPatterns.Decorator.Beverage.Test() ;
+			Decorator.Beverage.Test();
 			Console.ReadLine();
 		}
 	}

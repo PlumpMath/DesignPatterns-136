@@ -27,8 +27,7 @@ namespace DesignPatterns.AbstractFactory
 				factory = new MacOSXFactory();
 			}
 
-			var button = factory.CreateButton();
-			button.Draw();
+			factory.DrawButton();
 		}
 	}
 
@@ -41,7 +40,7 @@ namespace DesignPatterns.AbstractFactory
 	{
 		public abstract IButton CreateButton();
 
-		void DrawButton()
+		public void DrawButton()
 		{
 			CreateButton().Draw(); 
 		}
